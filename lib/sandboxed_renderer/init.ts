@@ -5,7 +5,7 @@ import * as events from 'events';
 
 const { EventEmitter } = events;
 
-process.electronBinding = electronBindingSetup(binding.get, 'renderer');
+process.electronBinding = electronBindingSetup(binding.get);
 
 const v8Util = process.electronBinding('v8_util');
 // Expose Buffer shim as a hidden value. This is used by C++ code to
